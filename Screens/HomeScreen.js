@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { StyleSheet,TextInput,View, Text, TouchableHighlight } from 'react-native'
 
-class  RecordsScreen extends Component {
+class  HomeScreen extends Component {
    constructor(props){
      super(props);
    }
@@ -9,10 +9,11 @@ class  RecordsScreen extends Component {
    {
     return (
       <View style={{flex:1 , justifyContent: 'center' , alignItems: 'center'}}>
-<Text>Records </Text>
+         <Text>Home </Text>
       </View>
     );
   }
 }
 
-export default RecordsScreen;
+
+export default HomeScreen;
