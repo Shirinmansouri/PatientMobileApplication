@@ -25,8 +25,23 @@ export const GlobalStyles=StyleSheet.create({
     alignSelf: "center",
     textTransform: "uppercase"
   },
-  titleText :{
-    fontSize: 15,
-   fontWeight: "bold"
-  }
+  recordContainer: {
+    paddingTop:30,
+    justifyContent: 'space-around',
+    marginHorizontal: 16,
+  },
+  patientData: {
+    padding: 20,
+    backgroundColor: '#ABD3EC',
+    fontSize: 10,
+    fontWeight: "bold",
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
+  },
+  recordRow: {
+    fontSize: 10,
+    fontWeight: "bold",
+  },
 });
