@@ -24,5 +24,9 @@ export const GlobalStyles=StyleSheet.create({
     fontWeight: "bold",
     alignSelf: "center",
     textTransform: "uppercase"
+  },
+  titleText :{
+    fontSize: 15,
+   fontWeight: "bold"
   }
 });
