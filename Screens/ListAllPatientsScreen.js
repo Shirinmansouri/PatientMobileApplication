@@ -17,6 +17,7 @@ class ListAllPatientsScreen extends Component {
      <View>
       <DataTable>
         <DataTable.Header>
+          <DataTable.Title style={{flex: 1}}>#</DataTable.Title>
           <DataTable.Title style={{flex: 1}}>Name</DataTable.Title>
           <DataTable.Title style={{flex: 2}}>Age </DataTable.Title>
           <DataTable.Title style={{flex: 2}}>HealthId</DataTable.Title>
@@ -25,6 +26,10 @@ class ListAllPatientsScreen extends Component {
         </DataTable.Header>
 
         <DataTable.Row >
+        <DataTable.Cell style={{flex: 1}}>
+              <Text style={GlobalStyles.recordRow}>1</Text>
+          </DataTable.Cell>
+           
           <DataTable.Cell style={{flex: 1}}>
               <Text style={GlobalStyles.recordRow}>Roud.G</Text>
           </DataTable.Cell>
@@ -43,6 +48,11 @@ class ListAllPatientsScreen extends Component {
         </DataTable.Row>
 
         <DataTable.Row >
+
+        <DataTable.Cell style={{flex: 1}}>
+              <Text style={GlobalStyles.recordRow}>2</Text>
+          </DataTable.Cell>
+
           <DataTable.Cell style={{flex: 1}}>
               <Text style={GlobalStyles.recordRow}>Botton.M</Text>
           </DataTable.Cell>
@@ -61,6 +71,10 @@ class ListAllPatientsScreen extends Component {
         </DataTable.Row>
 
         <DataTable.Row >
+        <DataTable.Cell style={{flex: 1}}>
+              <Text style={GlobalStyles.recordRow}>3</Text>
+          </DataTable.Cell>
+
           <DataTable.Cell style={{flex: 1}}>
               <Text style={GlobalStyles.recordRow}>Sancho.W</Text>
           </DataTable.Cell>
@@ -79,6 +93,11 @@ class ListAllPatientsScreen extends Component {
         </DataTable.Row>
 
          <DataTable.Row >
+
+         <DataTable.Cell style={{flex: 1}}>
+              <Text style={GlobalStyles.recordRow}>4</Text>
+          </DataTable.Cell>
+
           <DataTable.Cell style={{flex: 1}}>
               <Text style={GlobalStyles.recordRow}>Sancho.W</Text>
           </DataTable.Cell>
@@ -97,6 +116,10 @@ class ListAllPatientsScreen extends Component {
         </DataTable.Row>
 
         <DataTable.Row >
+
+        <DataTable.Cell style={{flex: 1}}>
+              <Text style={GlobalStyles.recordRow}>5</Text>
+          </DataTable.Cell>
           <DataTable.Cell style={{flex: 1}}>
               <Text style={GlobalStyles.recordRow}>Botton.M</Text>
           </DataTable.Cell>
@@ -115,6 +138,10 @@ class ListAllPatientsScreen extends Component {
         </DataTable.Row>
 
         <DataTable.Row >
+
+          <DataTable.Cell style={{flex: 1}}>
+              <Text style={GlobalStyles.recordRow}>6</Text>
+          </DataTable.Cell>
           <DataTable.Cell style={{flex: 1}}>
               <Text style={GlobalStyles.recordRow}>Sancho.W</Text>
           </DataTable.Cell>
