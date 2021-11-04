@@ -12,25 +12,36 @@ import {GlobalStyles} from '../Style/Global';
       justifyContent:'flex-start' ,marginVertical:8}]} >
 
        <View style={{flex: 1, flexDirection: 'row' }}>
-       <Text style={[GlobalStyles.titleText, {flex: 1 ,flexDirection:'column' }]}>First Name:</Text>
-       
-       <Text style={[GlobalStyles.titleText , {flex: 1 ,flexDirection:'column'}]}>Alex</Text>
+       <Text style={[GlobalStyles.titleText, {flex: 1 ,flexDirection:'column' }]}>First Name</Text>
+       <TextInput
+         style={GlobalStyles.textInputStyles}
+       />
       </View>
       <View style={{flex: 1, flexDirection: 'row' }}>
     <Text style={[GlobalStyles.titleText, {flex: 1 ,flexDirection:'column' }]}>LastName:</Text>
-    <Text style={[GlobalStyles.titleText , {flex: 1 ,flexDirection:'column'}]}>Ro</Text>
+    <TextInput
+         style={GlobalStyles.textInputStyles}
+       />
      </View>
      <View style={{flex: 1, flexDirection: 'row' }}>
      <Text style={[GlobalStyles.titleText, {flex: 1 ,flexDirection:'column' }]}>Health Id:</Text>
-     <Text style={[GlobalStyles.titleText , {flex: 1 ,flexDirection:'column'}]}>John</Text>
+     <TextInput
+         style={GlobalStyles.textInputStyles}
+       />
+    </View>
+    <View style={{flex: 1 , flexDirection: 'row' }}>
+    <TouchableHighlight
+       style = {[GlobalStyles.appButtonContainer ,  {flex: 1 ,flexDirection:'column' }]}>
+       <Text style = {GlobalStyles.appButtonText}>Find</Text>
+    </TouchableHighlight>
     </View>
     
-    <View style={[GlobalStyles.contentflex , {flex: 4 }]} >
-    <View style={{flex: 4, flexDirection: 'row' }}>
+    <View style={[GlobalStyles.contentflex , {flex: 5 }]} >
+    <View style={{flex: 1, flexDirection: 'row' }}>
       <Text>Date is here</Text>
       
     </View>
-        <View style={{ flex: 1, backgroundColor:"white"}}/>
+        
     </View>
     </View>
     </View>

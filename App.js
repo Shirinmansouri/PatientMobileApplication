@@ -13,6 +13,7 @@ import { StyleSheet,TextInput,View, Text, TouchableHighlight,Button,Alert,Toucha
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import ViewPatientRecordsScreen from './Screens/ViewPatientRecordsScreen'
 import ListAllPatientsScreen from './Screens/ListAllPatientsScreen'
+
 Icon.loadFont()
 const Tab=createMaterialTopTabNavigator();
 const Stack=createNativeStackNavigator()
@@ -27,7 +28,7 @@ function PatientsMenu() {
       />
       <Tab.Screen
         name="View Patients"
-        component={ViewPatientRecordsScreen}
+        component={ViewPatientsScreen}
         options={{ headerShown: true }}
       />
     <Tab.Screen
@@ -84,10 +85,7 @@ function App ()
       name ="Home"
       component={HomeScreen}
     />
-    <Tab.Screen
-    name ="ViewPatients"
-    component={ViewPatientsScreen}
-  />
+
   <Tab.Screen
     name ="Patients"
     component={PatientsMenu}
