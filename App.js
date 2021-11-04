@@ -84,10 +84,7 @@ function App ()
       name ="Home"
       component={HomeScreen}
     />
-    <Tab.Screen
-    name ="ViewPatients"
-    component={ViewPatientsScreen}
-  />
+
   <Tab.Screen
     name ="Patients"
     component={PatientsMenu}
