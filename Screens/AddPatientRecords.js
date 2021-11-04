@@ -3,33 +3,24 @@ import { StyleSheet,TextInput,View, Text, TouchableHighlight, FlatList ,Button} 
 import {Picker} from '@react-native-picker/picker'
 import DateTimePicker from '@react-native-community/datetimepicker';
 import {GlobalStyles} from '../Style/Global';
-class  RecordsScreen extends Component {
-   constructor(props){
-     super(props);
-   }
-   render()
-   {
-    return (
-      <View style={{flex:1 , justifyContent: 'center' , alignItems: 'center'}}>
-<Text>Records </Text>
-      </View>
-    );
-  }
-}
+import DropDownPicker from 'react-native-dropdown-picker';
 
 class AddPatientRecords extends Component{
   constructor(props)
   {
     super(props);
     this.state={
-      FirstName:props.FirstName,
-      LastName:props.LastName,
-      Age:props.Age,
-      Address:props.Address,
-      DateOfBirth:props.DateOfBirth,
-      PatientId: props.PatientId,
+      FirstName:'Shirin',
+      LastName:'Mansouri',
+      Age:'56',
+      Address:'l4j6t6',
+      DateOfBirth:'1960/01/01',
+      PatientId: '123456',
       date: new Date(Date.now()),
-      isPickerShow: false
+      isPickerShow: false,
+      options : ['one', 'two', 'three'],
+      defaultOption : 'one',
+      item : null,
     };
   }
    showPicker = () => {
@@ -69,9 +60,9 @@ class AddPatientRecords extends Component{
     return (
    <View style={GlobalStyles.container}>
     <View style={[GlobalStyles.contentflex, {flex:3 ,backgroundColor: 'silver' ,
-    justifyContent:'flex-start' ,marginVertical:8}]} >
+    justifyContent:'flex-start' ,marginVertical:8 , marginVertical : 50}]} >
      <View style={{flex: 4, flexDirection: 'row' }}>
-     <Text style={[GlobalStyles.titleText, {flex: 2 ,flexDirection:'column' }]}>First Name:</Text>
+     <Text style={[GlobalStyles.titleText, {flex: 1 ,flexDirection:'column' }]}>First Name:</Text>
      <Text style={[GlobalStyles.titleText , {flex: 1 ,flexDirection:'column'}]}>{this.state.FirstName}</Text>
     </View>
     <View style={{flex: 4, flexDirection: 'row' }}>
@@ -83,38 +74,44 @@ class AddPatientRecords extends Component{
      <Text style={[GlobalStyles.titleText , {flex: 1 ,flexDirection:'column'}]}>{this.state.Address}</Text>
     </View>
     <View style={{flex: 4, flexDirection: 'row' }}>
-    <Text style={[GlobalStyles.titleText, {flex: 2 ,flexDirection:'column' }]}>Date Of Birth:</Text>
+    <Text style={[GlobalStyles.titleText, {flex: 1 ,flexDirection:'column' }]}>Date Of Birth:</Text>
     <Text style={[GlobalStyles.titleText , {flex: 1 ,flexDirection:'column' }]}>{this.state.DateOfBirth}</Text>
     </View>
     <View style={{flex: 4, flexDirection: 'row' }}>
-    <Text style={[GlobalStyles.titleText, {flex: 2 ,flexDirection:'column' }]}>Age:</Text>
+    <Text style={[GlobalStyles.titleText, {flex: 1 ,flexDirection:'column' }]}>Age:</Text>
     <Text style={[GlobalStyles.titleText , {flex: 1 ,flexDirection:'column' }]}>{this.state.Age}</Text>
     </View>
     </View>
 
-    <View style={[GlobalStyles.contentflex , {flex: 4 }]} >
+    <View style={[GlobalStyles.contentflex , {flex: 6 }]} >
     <View style={{flex: 1, flexDirection: 'row' }}>
-      <Text  >{this.date}</Text>
-      {!this.state.isPickerShow && (
-          <Button title="Date/Time" color="purple" onPress={this.showPicker} />
-      )}
-      {this.state.isPickerShow && (
-       <DateTimePicker
-         value={this.state.date}
-         mode={'date'}
-         display={Platform.OS === 'ios' ? 'spinner' : 'default'}
-         is24Hour={true}
-         onChange={this.onChange}
-         style={GlobalStyles.datePicker}
-       />
-     )}
+    <Text style={[GlobalStyles.titleText, {flex: 1 ,flexDirection:'column' }]}>Date/Time:</Text>
+    <TextInput style={[GlobalStyles.textInputStyles, {flex: 2 ,flexDirection:'column' }]} placeholder='MM/DD/YYYY' />
+
+
     </View>
     <View style={{flex: 1, flexDirection: 'row' }}>
+
     <Text style={[GlobalStyles.titleText, {flex: 1 ,flexDirection:'column' }]}>Type Of Data:</Text>
-    <Picker style={{ height: 50, width: 150 ,flex: 2 ,flexDirection: 'column'}} >
-         <Picker.Item label="Java" value="java" />
-         <Picker.Item label="JavaScript" value="js" />
-       </Picker>
+    <DropDownPicker
+        items={[
+            {label: 'Blood Pressure (X/Y mmHg)', value: 'Blood Pressure (X/Y mmHg)' , selected: true},
+            {label: 'Respiratory Rate (X/min)', value: 'Respiratory Rate (X/min)'},
+            {label: 'Blood Oxygen Level (X%)', value: 'Blood Oxygen Level (X%)'},
+            {label: 'Heartbeat Rate (X/min)', value: 'Heartbeat Rate (X/min)'},
+        ]}
+        defaultNull={this.state.item}
+        placeholder="Select an item"
+        containerStyle={GlobalStyles.dropDownContainer}
+        style={{backgroundColor: '#fafafa' ,borderWidth: 2 ,flexDirection: 'column' , flex: 4}}
+        onChangeItem={
+          (item)=> {
+          this.setState({
+            item: item.value
+
+        });
+      }}
+    />
     </View>
     <View style={{flex: 1, flexDirection: 'row' }}>
     <Text style={[GlobalStyles.titleText]}>Reading/Value:</Text>
@@ -133,7 +130,7 @@ class AddPatientRecords extends Component{
     </TouchableHighlight>
     </View>
     </View>
-      <View style={[GlobalStyles.contentflex , {flex: 3 ,backgroundColor: 'white'}]} >
+      <View style={[GlobalStyles.contentflex , {flex: 2 ,backgroundColor: 'white'}]} >
       </View>
 </View>
 
@@ -141,15 +138,4 @@ class AddPatientRecords extends Component{
     );
   }
 }
-
 export default AddPatientRecords;
-
-const styles=StyleSheet.create(
-  {
-    titleText:{
-      fontSize: 20,
-      fontWeight: 'bold',
-    }
-
-  }
-)

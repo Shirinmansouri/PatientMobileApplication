@@ -2,6 +2,10 @@
 import React, { Component } from 'react'
 import { StyleSheet,TextInput,View, Text, TouchableHighlight,Button,Alert,TouchableOpacity} from 'react-native'
 import {GlobalStyles} from '../Style/Global';
+
+
+
+
  class PatientsScreen extends Component {
    constructor(props){
      super(props);
@@ -12,7 +16,7 @@ import {GlobalStyles} from '../Style/Global';
       <View style={{ flex: 1, backgroundColor: "white" }}/>
 
       <View style={GlobalStyles.contentflex}>
-      <TouchableOpacity onPress={()=>Alert.alert('Add New Patients')} style={GlobalStyles.appButtonContainer}>
+      <TouchableOpacity onPress={ ()=>this.props.navigation.navigate('Shirin')} style={GlobalStyles.appButtonContainer}>
           <Text style={GlobalStyles.appButtonText}>Add New Patients</Text>
         </TouchableOpacity>
 

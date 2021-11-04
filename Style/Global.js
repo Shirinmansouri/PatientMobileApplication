@@ -16,9 +16,10 @@ export const GlobalStyles=StyleSheet.create({
     elevation: 1,
     backgroundColor: "#60839C",
     borderRadius: 10,
-    paddingVertical: 13,
+    paddingVertical: 10,
    marginHorizontal: 20,
    height: 45,
+   margin: 10,
   },
   appButtonText: {
     fontSize: 15,
@@ -63,14 +64,25 @@ pickedDate: {
   color: 'black',
 },
 btnContainer: {
-    padding: 30,
+    padding: 50,
+  },
+  dropDownContainer :{
+    height: 40 ,
+    width: 210,
+    margin: 10,
+    zIndex: 1000,
+    elevation: 1000
+
   },
   textInputStyles: {
-   height: 40,
+   height: 50,
    margin: 10,
-   borderWidth: 1,
+   borderWidth: 2,
    padding: 0,
    width: 200,
+   backgroundColor: '#fafafa',
+   borderRadius: 10,
+
  },
  titleText :
  {
