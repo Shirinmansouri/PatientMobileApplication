@@ -4,13 +4,14 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import PatientsScreen from './Screens/PatientsScreen';
-import RecordsScreen from './Screens/RecordsScreen';
+import ReportsScreen from './Screens/ReportsScreen';
 import AddPatientRecords from './Screens/AddPatientRecords';
 import Icon  from 'react-native-vector-icons/Ionicons';
 import  HomeScreen from './Screens/HomeScreen';
 import { StyleSheet,TextInput,View, Text, TouchableHighlight,Button,Alert,TouchableOpacity} from 'react-native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import ViewPatientRecordsScreen from './Screens/ViewPatientRecordsScreen'
+import ListAllPatientsScreen from './Screens/ListAllPatientsScreen'
 Icon.loadFont()
 const Tab=createMaterialTopTabNavigator();
 const Stack=createNativeStackNavigator()
@@ -30,7 +31,7 @@ function PatientsMenu() {
       />
     <Tab.Screen
         name="List Patients"
-        component={PatientsScreen}
+        component={ListAllPatientsScreen}
         options={{ headerShown: true }}
       />
   </Tab.Navigator>
@@ -88,7 +89,7 @@ function App ()
   />
   <Tab.Screen
     name ="Reports"
-    component={RecordsScreen}
+    component={ReportsScreen}
 />
   </Tab.Navigator>
   </NavigationContainer>

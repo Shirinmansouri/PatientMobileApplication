@@ -5,7 +5,7 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 import {GlobalStyles} from '../Style/Global';
 import DropDownPicker from 'react-native-dropdown-picker';
 
-class  RecordsScreen extends Component {
+class  ReportsScreen extends Component {
    constructor(props){
      super(props);
    }
@@ -21,7 +21,7 @@ class  RecordsScreen extends Component {
 
 
 
-export default RecordsScreen;
+export default ReportsScreen;
 
 const styles=StyleSheet.create(
   {
