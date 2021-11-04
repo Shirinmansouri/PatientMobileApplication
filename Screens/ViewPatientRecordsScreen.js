@@ -13,7 +13,7 @@ class ViewPatientRecordsScreen extends Component {
    render(){
      return (
     <View style={GlobalStyles.recordContainer}>
-     <View style={GlobalStyles.patientData}>
+     <View style={[GlobalStyles.patientData , {backgroundColor: 'silver' }]}>
      <Table borderStyle={"none"}>
         <Row
           data={CONTENT.firstRow}
@@ -33,7 +33,8 @@ class ViewPatientRecordsScreen extends Component {
          />
       </Table>
      </View>
-     <View>
+     <View style={[GlobalStyles.contentflex, {flex:2 ,
+     justifyContent:'flex-start' ,marginVertical:8 , marginVertical : 50}]} >
       <DataTable>
         <DataTable.Header>
           <DataTable.Title style={{flex: 1}}>#</DataTable.Title>
