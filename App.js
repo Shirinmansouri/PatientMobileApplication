@@ -8,6 +8,7 @@ import ReportsScreen from './Screens/ReportsScreen';
 import AddPatientRecords from './Screens/AddPatientRecords';
 import Icon  from 'react-native-vector-icons/Ionicons';
 import  HomeScreen from './Screens/HomeScreen';
+import ViewPatientsScreen from './Screens/ViewPatientScreen';
 import { StyleSheet,TextInput,View, Text, TouchableHighlight,Button,Alert,TouchableOpacity} from 'react-native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import ViewPatientRecordsScreen from './Screens/ViewPatientRecordsScreen'
@@ -83,6 +84,10 @@ function App ()
       name ="Home"
       component={HomeScreen}
     />
+    <Tab.Screen
+    name ="ViewPatients"
+    component={ViewPatientsScreen}
+  />
   <Tab.Screen
     name ="Patients"
     component={PatientsMenu}
