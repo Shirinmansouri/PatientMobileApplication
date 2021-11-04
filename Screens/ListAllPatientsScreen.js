@@ -33,10 +33,10 @@ class ListAllPatientsScreen extends Component {
           <DataTable.Cell style={{flex: 1}}>
               <Text style={GlobalStyles.recordRow}>Roud.G</Text>
           </DataTable.Cell>
-          <DataTable.Cell style={{flex: 3}} numeric>
+          <DataTable.Cell style={{flex: 2}} numeric>
               <Text style={GlobalStyles.recordRow}>40</Text>
           </DataTable.Cell>
-          <DataTable.Cell style={{flex: 3}} numeric>
+          <DataTable.Cell style={{flex: 2}} numeric>
               <Text style={GlobalStyles.recordRow}>234</Text>
           </DataTable.Cell>
           <DataTable.Cell style={{flex: 2}} numeric>

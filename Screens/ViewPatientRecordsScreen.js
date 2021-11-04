@@ -31,7 +31,7 @@ class ViewPatientRecordsScreen extends Component {
           data={CONTENT.fourthRow}
           flexArr={[1, 1]}
          />
-      </Table>  
+      </Table>
      </View>
      <View>
       <DataTable>
