@@ -7,6 +7,7 @@ import PatientsScreen from './Screens/PatientsScreen';
 import RecordsScreen from './Screens/RecordsScreen';
 import Icon  from 'react-native-vector-icons/Ionicons';
 import  HomeScreen from './Screens/HomeScreen';
+import ViewPatientsScreen from './Screens/ViewPatientScreen';
 import { StyleSheet,TextInput,View, Text, TouchableHighlight,Button,Alert,TouchableOpacity} from 'react-native'
 
 Icon.loadFont()
@@ -55,6 +56,10 @@ function App ()
       name ="Home"
       component={HomeScreen}
     />
+    <Tab.Screen
+    name ="ViewPatients"
+    component={ViewPatientsScreen}
+  />
   <Tab.Screen
     name ="Patients"
     component={PatientsScreen}
