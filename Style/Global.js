@@ -28,6 +28,13 @@ export const GlobalStyles=StyleSheet.create({
     alignSelf: "center",
     textTransform: "uppercase"
   },
+  tableButton: {
+    fontSize: 10,
+    color: "#fff",
+    fontWeight: "bold",
+    alignSelf: "center",
+    textTransform: "uppercase"
+  },
   recordContainer: {
     paddingTop:30,
     justifyContent: 'space-around',
