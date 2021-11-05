@@ -3,6 +3,8 @@ import { StyleSheet,TextInput,View, Text, SafeAreaView, TouchableHighlight,Butto
 import {GlobalStyles} from '../Style/Global';
 import { DataTable } from 'react-native-paper';
 import { Table, Row} from 'react-native-table-component';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
  class ViewPatientsScreen extends Component {
    constructor(props){
      super(props);
@@ -37,9 +39,9 @@ import { Table, Row} from 'react-native-table-component';
        <Text style = {GlobalStyles.appButtonText}>Find</Text>
     </TouchableHighlight>
     </View>
-    
+
     <View style={[GlobalStyles.contentflex , {flex: 5 }]} >
- 
+
 
     <View>
       <DataTable>
@@ -66,13 +68,13 @@ import { Table, Row} from 'react-native-table-component';
               <Text style={GlobalStyles.recordRow}>234</Text>
           </DataTable.Cell>
           <DataTable.Cell style={{flex: 2}} numeric>
-              <Button style={GlobalStyles.recordRow} title="Dtl" onPress={()=>this.props.navigation.navigate('New Patients')}></Button>
+              <Button style={GlobalStyles.recordRow} title="Dtl" onPress={()=>this.props.navigation.navigate('Add Patient Record')}></Button>
           </DataTable.Cell>
           <DataTable.Cell style={{flex: 2}} numeric>
-              <Button style={GlobalStyles.recordRow} title="Add" onPress={()=>this.props.navigation.navigate('New Patients')}></Button>
+              <Button style={GlobalStyles.recordRow} title="Add" onPress={()=>this.props.navigation.navigate('Add Patient Record')}></Button>
           </DataTable.Cell>
           <DataTable.Cell style={{flex: 2}} numeric>
-              <Button style={GlobalStyles.recordRow} title="List" onPress={()=>this.props.navigation.navigate('New Patients')}></Button>
+              <Button style={GlobalStyles.recordRow} title="List" onPress={()=>this.props.navigation.navigate('View Patient Record')}></Button>
           </DataTable.Cell>
         </DataTable.Row>
         <DataTable.Row >
@@ -99,7 +101,7 @@ import { Table, Row} from 'react-native-table-component';
           <DataTable.Cell style={{flex: 2}} numeric>
               <Button style={GlobalStyles.recordRow} title="List" onPress={()=>this.props.navigation.navigate('New Patients')}></Button>
           </DataTable.Cell>
-        </DataTable.Row>    
+        </DataTable.Row>
         <DataTable.Row >
         <DataTable.Cell style={{flex: 1}}>
               <Text style={GlobalStyles.recordRow}>3</Text>
@@ -152,13 +154,13 @@ import { Table, Row} from 'react-native-table-component';
 
         </DataTable>
         </View>
-     
-      
+
+
     </View>
-        
+
     </View>
     </View>
-  
+
   );
   }
 }
