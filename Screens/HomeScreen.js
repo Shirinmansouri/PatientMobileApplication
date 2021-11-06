@@ -4,6 +4,7 @@ import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs
 import ReportsScreen from '../Screens/ReportsScreen';
 import ListAllPatientsScreen from '../Screens/ListAllPatientsScreen';
 import ViewPatientScreen from '../Screens/ViewPatientScreen';
+import AddNewPatient from '../Screens/AddNewPatient';
 import NavigationContainer from '@react-navigation/native'
 import Icon  from 'react-native-vector-icons/Ionicons';
 
@@ -51,7 +52,7 @@ class  HomeScreen extends Component {
 
         <Tab.Screen
           name ="New Patients"
-          component={ReportsScreen}
+          component={AddNewPatient}
         />
 
       <Tab.Screen
