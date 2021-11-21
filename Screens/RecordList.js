@@ -27,12 +27,12 @@ class RecordList extends React.Component{
                     <Text style = {{flex : 1.6 }}>
                         {Moment(item.dateTime).format('L')}
                         </Text>
-                        <Text style = {{flex : 2.4 }}>
+                        <Text style = {{flex : 2 }}>
                         {item.category}
                         </Text>
                          
-                        <Text style = {{flex : 1 }}>
-                        {item.readings.singleValue != null ?item.readings.singleValue : item.readings.diastolic + '/' + item.readings.systolic }
+                        <Text style = {{flex : 1.4 , fontSize : 10 , fontWeight: "bold"}}>
+                        {item.readings.singleValue != null ?item.readings.singleValue : item.readings.systolic + '/' + item.readings.diastolic + ' mmHg'}
                     </Text>
                 </View>}
                 /> 
