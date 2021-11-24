@@ -6,9 +6,7 @@ import {GlobalStyles} from '../Style/Global';
 import DropDownPicker from 'react-native-dropdown-picker';
 import { Table, Row} from 'react-native-table-component';
 import ajax from './ajax';
-import RecordList from './RecordList';
 import { any } from 'prop-types';
-import RadioButton from 'react-native-paper';
 
 
 class AddPatientRecords extends Component{
@@ -137,7 +135,7 @@ class AddPatientRecords extends Component{
       <View style={{flex: 4, flexDirection: 'row' }}>
         <Text style={[GlobalStyles.titleText]}>Type Of Data:</Text>
         
-        <RadioButton.Group
+        {/* <RadioButton.Group
         onValueChange={value => this.setState({ value })}
         value={this.state.value}
       >
@@ -157,7 +155,7 @@ class AddPatientRecords extends Component{
           <Text>Heartbeat Rate (X/min)</Text>
           <RadioButton value="Heart Beat Rate" />
         </View>
-        </RadioButton.Group>
+        </RadioButton.Group> */}
       </View> 
       <View style={{flex: 1 , flexDirection: 'row' }}>
         <TouchableHighlight
