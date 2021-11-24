@@ -39,7 +39,7 @@ class  HomeScreen extends Component {
           }
           else if (route.name==='List Patients')
           {
-            iconName="home";
+            iconName="list";
                 size= focused? 25 :20;
           }
           return (

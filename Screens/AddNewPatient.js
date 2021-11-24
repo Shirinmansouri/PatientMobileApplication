@@ -38,8 +38,8 @@ const AddNewPatient = ({navigation, route})=>{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          firstName: firstName, 
-          lastName: lastName, 
+          firstName: firstName,
+          lastName: lastName,
           dateOfBirth: dateOfBirth,
           doctor: doctor,
           department: department,
@@ -50,14 +50,15 @@ const AddNewPatient = ({navigation, route})=>{
     };
     try{
 
-    const response = await fetch('http://127.0.0.1:5000/patients', requestOptions).catch(err => console.log(err));
+    const response = await fetch('http://127.0.0.1:5000/patients', requestOptions).
+    catch(err => console.log(err));
     // console.log(response._bodyBlob)
     // console.log(response)
     // const data = await response.json();
     // console.log(data)
   } catch (error) {
     console.error(error);
-  }   
+  }
 }
   const openDatePicker = () => {
     setShowDatePicker(true)
@@ -71,7 +72,7 @@ const AddNewPatient = ({navigation, route})=>{
   const onConfirm = ( date ) => {
     // You should close the modal in here
     setShowDatePicker(false)
-    
+
     // The parameter 'date' is a Date object so that you can use any Date prototype method.
     console.log(date.getDate())
   }
@@ -145,7 +146,7 @@ const AddNewPatient = ({navigation, route})=>{
         alignItems:"center",
         justifyContent:"center",
         margin: 5}}>
-        
+
         <TouchableOpacity onPress={openDatePicker}>
 
           <Text>Pick</Text>
@@ -193,7 +194,7 @@ const AddNewPatient = ({navigation, route})=>{
         </View>
 
               <View style={[GlobalStyles.appButtonContainer ,  {flex: 1 ,flexDirection:'column' }]}>
-        
+
 
                   <TouchableOpacity onPress={onPress}>
           <Text style = {GlobalStyles.appButtonText}>Cancel</Text>
