@@ -32,7 +32,7 @@ class RecordList extends React.Component{
                         </Text>
                          
                         <Text style = {{flex : 1.4 , fontSize : 10 , fontWeight: "bold"}}>
-                        {item.readings.singleValue != null ?item.readings.singleValue : item.readings.systolic + '/' + item.readings.diastolic + ' mmHg'}
+                        {item.readings.singleValue}
                     </Text>
                 </View>}
                 /> 
