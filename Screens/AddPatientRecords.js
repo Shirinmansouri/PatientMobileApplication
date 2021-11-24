@@ -117,15 +117,15 @@ class AddPatientRecords extends Component{
 
     <View style={[GlobalStyles.contentflex , {flex: 6 }]} >
     <View style={{flex: 0.8, flexDirection: 'row' }}>
-        <Text style={[GlobalStyles.titleText]}>Date / Time:  </Text>
+        <Text style={[GlobalStyles.titleText]}>Date / Time:      </Text>
         <TextInput style={GlobalStyles.textInputStyles} onChangeText={(text)=> {this.setState({dateTime: text});}}/>
       </View>
       <View style={{flex: 0.8, flexDirection: 'row' }}>
-        <Text style={[GlobalStyles.titleText]}>Nurse Name:</Text>
+        <Text style={[GlobalStyles.titleText]}>Nurse Name:    </Text>
         <TextInput style={GlobalStyles.textInputStyles} onChangeText={(text)=> {this.setState({nurseName: text});}}/>
       </View>
       <View style={{flex: 0.8, flexDirection: 'row' }}>
-        <Text style={[GlobalStyles.titleText]}>Type:              </Text>
+        <Text style={[GlobalStyles.titleText]}>Type:                   </Text>
         <TextInput style={GlobalStyles.textInputStyles} onChangeText={(text)=> {this.setState({type: text});}}/>
       </View>
       <View style={{flex: 0.8, flexDirection: 'row' }}>
