@@ -105,4 +105,21 @@ btnContainer: {
    width: 100,
    height: 100,
  },
+ textInputContainer :
+ { 
+   height: 20,
+   alignItems: 'flex-end',
+   borderColor: 'gray',
+   borderWidth: 1,
+   width: 150,
+   color: "black",
+  },
+  textButtonRowContainer :
+  {
+    flex: 1,
+    justifyContent: 'space-evenly',
+    flexDirection: "row",
+    marginTop:10,
+    marginBottom:0,
+  },
 });
