@@ -67,13 +67,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
           <DataTable.Cell style={{flex: 2}} numeric>
               <Text style={GlobalStyles.recordRow}>234</Text>
           </DataTable.Cell>
-<<<<<<< HEAD
-
-=======
-          <DataTable.Cell style={{flex: 2}} numeric>
-              <Button style={GlobalStyles.recordRow} title="Dtl" onPress={()=>this.props.navigation.navigate('Add Patient Record') }></Button>
-          </DataTable.Cell>
->>>>>>> 61649878a4eef98ea991b086c6ab6fde0c026d91
           <DataTable.Cell style={{flex: 2}} numeric>
               <Button style={GlobalStyles.recordRow} title="Add" onPress={()=>{
                     this.props.navigation.navigate('Add Patient Record', {
